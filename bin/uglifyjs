@@ -24,6 +24,7 @@ var options = {
         out_same_file: false,
         max_line_length: 32 * 1024,
         unsafe: false,
+        experimental: false,
         beautify_options: {
                 indent_level: 4,
                 indent_start: 0,
@@ -89,6 +90,9 @@ out: while (args.length > 0) {
                 break;
             case "--unsafe":
                 options.unsafe = true;
+                break;
+            case "--experimental":
+                options.experimental = true;
                 break;
             case "--max-line-len":
                 options.max_line_length = parseInt(args.shift(), 10);
